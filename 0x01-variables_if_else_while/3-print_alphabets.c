@@ -2,18 +2,27 @@
 
 /**
 * main - entry point
-*
 * Return: alway returns 0
-*
 */
+
 int main(void)
 {
-char a;
+char lower = 'a';
+char upper = 'A';
 
-	for (a = 'a'; a <= 'z' ; a++)
-		putchar(a);
-	for (a = 'A'; a <= 'Z'; a++)
-		putchar(a);
-		putchar('\n');
+	while (lower <= 'z') /*print lowercases a-z*/
+		{
+			putchar(lower);
+			lower++;
+		}
+
+	while (upper <= 'Z') /*print uppercase A-Z*/
+		{
+			putchar(upper);
+			upper++;
+		}
+
+			putchar('\n');
+
 	return (0);
 }
