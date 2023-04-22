@@ -21,7 +21,6 @@ char upper = 'A';
 			putchar(upper);
 			upper++;
 		}
-
 			putchar('\n');
 
 	return (0);
