@@ -27,6 +27,5 @@ int min = 0;
 				}
 				min = 0;
 				hours++;
-
 		}
 }
