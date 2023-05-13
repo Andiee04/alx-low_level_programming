@@ -1,17 +1,13 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - prints a number passed into it
- * @argc: size of argv
- * @argv: array containg vector of  argument
- * return : 0
+ * main - function
+ * @argc: number of arguments passed
+ * @argv: arguments passed here
+ * Return: Always 0
  */
-
-int main(int argc, char *argv[] __attribute__((unused)))
+int main(int argc, char __attribute__((unused)) *argv[])
 {
-	if (argc > 0)
 	printf("%d\n", argc - 1);
-
-return (0);
+	return (0);
 }
