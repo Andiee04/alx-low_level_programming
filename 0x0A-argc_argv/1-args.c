@@ -5,7 +5,7 @@
  * main - prints a number passed into it
  * @argc: size of argv
  * @argv: array containg vector of  argument
- * Return : 0
+ * return : 0
  **/
 int main(int argc, char *argv[])
 {
