@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
+ * main - prints name of program
  * @argv: array of pointers to arguement in strings
  * @argc: argument count
- * main - prints name of program
  * Return: 0
  **/
 
