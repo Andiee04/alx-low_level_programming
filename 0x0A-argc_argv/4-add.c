@@ -5,7 +5,7 @@
 
 /**
  * num_checker - checks if char is number
- * @b: char to be processed
+ * @x: char to be processed
  * Return: 1, if its a number, else 0
  **/
 int num_checker(char *a)
