@@ -1,52 +1,29 @@
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * num_checker - checks if char is number
- * @x: char to be processed
- * Return: 1, if its a number, else 0
- **/
-int num_checker(char *a)
-{
-	int x, num, len;
-
-	x = 0;
-	num = 0;
-	len = strlen(a);
-	while (x < len)
-	{
-		if (a[x] < '0' || a[x] > '9')
-		{
-			return (-1);
-		}
-		else
-			num = num * 10 + (a[x] - '0');
-		x++;
-	}
-	return (num);
-}
-/**
- * main - add positive numbers
- * @argc: arguement count
- * @argv: array of arguement vector
- * Return: result
+ * main - print the sum of variables
+ * @argc: number of arguments
+ * @argv: vector of arguments
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int x, num, sum;
+	int x, y, varia;
 
-	sum = 0;
 	for (x = 1; x < argc; x++)
 	{
-		num = num_checker(argv[x]);
-		if (num == -1)
+		for (b = 0; argv[x][y] != '\0'; y++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[x][y]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += num;
+		varia = varia + atoi(argv[x]);
 	}
-	printf("%d\n", sum);
+	printf("%i\n", varia);
 	return (0);
 }
