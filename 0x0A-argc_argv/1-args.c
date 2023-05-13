@@ -6,7 +6,7 @@
  * @argc: size of argv
  * @argv: array containg vector of  argument
  * Return : 0
- */
+ **/
 
 int main(int argc, char *argv[])
 {
