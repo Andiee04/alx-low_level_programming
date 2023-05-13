@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * @argv: array of pointers to arguement in strings
  * @argc: argument count
@@ -8,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	argc = argc;
+	if (argc > 0)
 	printf("%s\n", *argv);
 	return (0);
 }
