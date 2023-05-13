@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all arguments
- * @argc: size of argv
- * @argv: array containing the program line arguments
+ * main - prints all arguments it receives.
+ * @argc: size of argv .
+ * @argv: the vector of an array arguments .
  * Return: 0
  */
 int main(int argc, char *argv[])
