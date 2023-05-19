@@ -6,7 +6,7 @@
  * @size: size of
  * Return: NULL when it fails
  */
- 
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *x;
