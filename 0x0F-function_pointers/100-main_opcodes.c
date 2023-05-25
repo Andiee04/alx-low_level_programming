@@ -7,12 +7,12 @@
  * @argv: char type argument array
  * Return: 0
  */
- 
+
 int main(int argc, char **argv)
 {
 	int cal;
 
-	cal= 0;
+	cal = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");

@@ -14,7 +14,7 @@ int (*get_op_func(char *s))(int, int);
  * @op: The operator
  * @f: The function associated
  */
- 
+
 typedef struct op
 {
 	char *op;

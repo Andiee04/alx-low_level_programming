@@ -8,7 +8,7 @@
  * @cmp: points to the function used to compare values
  * Return: first element index,on succes or return -1
  **/
- 
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int v;

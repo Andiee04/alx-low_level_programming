@@ -8,8 +8,8 @@
  * @b: int b
  * Return: sum of the two numbers
  **/
- 
- int op_add(int a, int b)
+
+int op_add(int a, int b)
 {
 	return (a + b);
 }
@@ -20,7 +20,7 @@
  * @b: int b
  * Return: difference of int
  */
- 
+
 int op_sub(int a, int b)
 {
 	return (a - b);
@@ -32,7 +32,7 @@ int op_sub(int a, int b)
  * @b: int b
  * Return: multiplication of int
  **/
- 
+
 int op_mul(int a, int b)
 {
 	return (a * b);
@@ -44,7 +44,7 @@ int op_mul(int a, int b)
  * @b: int b
  * Return: division of int
  */
- 
+
 int op_div(int a, int b)
 {
 	return (a / b);
@@ -56,7 +56,7 @@ int op_div(int a, int b)
  * @b: int b
  * Return: mod of int
  **/
- 
+
 int op_mod(int a, int b)
 {
 	if (b == 0)
