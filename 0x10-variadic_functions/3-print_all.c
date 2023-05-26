@@ -3,57 +3,8 @@
 #include <stdio.h>
 
 /**
- * print_char - prints char input
- * @valist: valist
- */
-
-void print_char(va_list valist)
-{
-	printf("%c", va_arg(valist, int));
-}
-
-/**
- * print_int - prints int input
- * @valist: valist
- */
-
-void print_int(va_list valist)
-{
-	printf("%d", va_arg(valist, int));
-}
-
-/**
- * print_float - prints float value
- * @valist: valist
- */
-
-void print_float(va_list valist)
-{
-	printf("%f", va_arg(valist, double));
-}
-
-/**
- * print_string - prints string value
- * @valist: valist
- */
-
-void print_string(va_list valist)
-{
-	char *a;
-
-	a = va_arg(valist, char *);
-
-	if (a == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", a);
-}
-
-/**
- * print_all - print diffrent value of ints, chars, floats, and strings
- * @format: an array of chars signifying which data type to print
+ * print_all - print varying input values of arguments
+ * @format: format string that holds arg types
  */
 
 void print_all(const char * const format, ...)
@@ -98,4 +49,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(listAr);
 }
-
