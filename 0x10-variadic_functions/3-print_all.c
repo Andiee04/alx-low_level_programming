@@ -58,36 +58,44 @@ void print_string(va_list valist)
 
 void print_all(const char * const format, ...)
 {
-	char *sep = "";
-	char *sep2 = ", ";
-	int a, b;
-	va_list lsArg;
+	int a = 0;
+	char *str, *sep = "";
 
-	printer ops[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"s", print_s},
-		{"f", print_f},
-		{NULL, NULL}
-	};
+	va_list listAr;
 
-	va_start(lsArg, format);
-	a = 0;
-	while (format != NULL && format[a])
+	va_start(listAr, format);
+
+	if (format)
 	{
-		b = 0;
-		while (ops[b].f != NULL)
+		while (format[a])
 		{
-			if (format[a] == *(ops[b].c))
+			switch (format[a])
 			{
-				printf("%s", sep);
-				ops[b].f(lsArg);
+				case 'c':
+					printf("%s%c", sep, va_arg(listAr, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(listAr, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(listAr, double));
+					break;
+				case 's':
+					str = va_arg(listAr, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					a++;
+					continue;
 			}
-			b++;
+			sep = ", ";
+			a++;
 		}
-		sep = sep2;
-		a++;
 	}
+
 	printf("\n");
-	va_end(lsArg);
+	va_end(listAr);
 }
+
