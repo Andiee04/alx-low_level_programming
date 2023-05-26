@@ -7,7 +7,7 @@
  * @n: number of strings to be printed
  * Return: void
  */
- 
+
 void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	va_list pointer;
