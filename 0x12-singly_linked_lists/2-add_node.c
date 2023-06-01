@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * _strlen - find length string count 
+ * _strlen - find length string count
  * @str: string
  * Return: length count
  */
@@ -30,22 +30,22 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 
 	Nnode = (list_t *)malloc(sizeof(list_t));
-	
+
 	if (Nnode == NULL)
 		return (NULL);
 
 	Nnode->str = strdup(str);
-	
+
 	if (Nnode->str == NULL)
 	{
 		free(Nnode);
-		
+
 		return (NULL);
 	}
-	
+
 	Nnode->len = _strlen(Nnode->str);
 	Nnode->next = *head;
 	*head = Nnode;
-	
+
 	return (Nnode);
 }
