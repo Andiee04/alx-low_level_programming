@@ -4,7 +4,7 @@
  * main - prints all possible different combinations of three digits.
  * Return: Results
  */
- 
+
 int main(void)
 {
 	int a1, a2, a3;
