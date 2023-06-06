@@ -5,22 +5,26 @@
  * @head: pointer to head pointer of linked list
  * Return: address of node where loop starts/returns
  */
-
 size_t print_listint_safe(const listint_t *head)
 {
-	if (head)
+	
+	size_t Ncount = 0;
+
+	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
-		if (head->next < head)
+		Ncount += 1;
+
+		if (head > head->next)
 		{
-			return (1 + print_listint_safe(head->next));
+			head = head->next;
 		}
 		else
 		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			return (1);
+			head = head->next;
+			printf("-> [%p] %d\n", (void *)head, head->n);
+			break;
 		}
-
 	}
-	return (0);
+	return (Ncount);
 }
