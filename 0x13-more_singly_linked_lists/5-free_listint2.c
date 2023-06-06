@@ -12,16 +12,16 @@ void free_listint2(listint_t **head)
 
 	if (head == NULL)
 		return;
-		
+
 	Cnode = *head;
-	
+
 	while (Cnode != NULL)
-	
+
 	{
 		Tnode = Cnode;
 		Cnode = Cnode->next;
 		free(Tnode);
 	}
-	
+
 	*head = NULL;
 }
