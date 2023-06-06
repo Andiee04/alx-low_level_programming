@@ -3,36 +3,29 @@
 /**
  * free_listint_safe - frees a list
  * @h: pointer to the start of the list
- *
- * Return: number of nodes freed
+ * Return: result
  */
+
+
 size_t free_listint_safe(listint_t **h)
 {
-	size_t nodeCount = 0;
-	listint_t *current, *next;
+	size_t a = 0;
+	listint_t *Linkh, *Tnode;
+	long dif;
 
-	if (h == NULL || *h == NULL)
-		return (nodeCount);
-
-	current = *h;
-
-	while (current != NULL)
+	if (!h)
+		return (0);
+	Linkh = *h;
+	*h = NULL;
+	while (Linkh)
 	{
-		next = current->next;
-
-		/* Free the current node */
-		free(current);
-		nodeCount++;
-
-		/* Break the loop if we encounter a previously visited node */
-		if (next <= current)
+		a++;
+		dif = Linkh->next - Linkh;
+		Tnode = Linkh;
+		free(Tnode);
+		if (dif >= 0)
 			break;
-
-		current = next;
+		Linkh = Linkh->next;
 	}
-
-	*h = NULL; /* Set the head pointer to NULL */
-
-	return (nodeCount);
+	return (a);
 }
-
