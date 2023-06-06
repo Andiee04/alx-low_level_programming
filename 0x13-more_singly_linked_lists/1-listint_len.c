@@ -2,20 +2,15 @@
 
 /**
  * listint_len - returns the number of elements in a linked list
- * @h: points to the first element of the list
+ * @h: pointer to the head of the list
  *
- * Return: number of elements in a linked list
+ * Return: number of elements in the list
  */
-
 size_t listint_len(const listint_t *h)
-
 {
-	size_t a;
+	if (h == NULL)
+		return 0;
 
-	for (a = 0; h;)
-
-	a++;
-	h = h->next;
-
-	return (a);
+	return 1 + listint_len(h->next);
 }
+
